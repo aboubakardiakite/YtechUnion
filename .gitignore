@@ -1,0 +1,63 @@
+# Dépendances
+/node_modules
+/.pnp
+.pnp.js
+
+# Production
+/dist
+/build
+
+# Fichiers de test
+/coverage
+
+# Fichiers de configuration locaux
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs
+*.log
+
+# Éditeurs
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache
+
+# Fichiers de verrouillage
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Fichiers de débogage
+.debug
+debug.log
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Dossiers de build Vue
+.vue-cache
+.nuxt
+.nitro
+.output 

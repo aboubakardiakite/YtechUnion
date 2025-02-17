@@ -1,0 +1,24 @@
+src/
+  ├── assets/
+  │   └── images/
+  │       ├── index.js
+  │       ├── team.jpg
+  │       ├── hero-bg.jpg
+  │       ├── web-dev-icon.png
+  │       ├── seo-icon.png
+  │       ├── branding-icon.png
+  │       ├── client-1.png
+  │       ├── client-2.png
+  │       ├── client-3.png
+  │       ├── client-4.png
+  │       └── client-5.png
+  ├── components/
+  │   ├── Header.vue
+  │   ├── Hero.vue
+  │   ├── AboutUs.vue
+  │   ├── Services.vue
+  │   ├── Clients.vue
+  │   ├── Contact.vue
+  │   └── ServiceCard.vue
+  ├── App.vue
+  └── main.js 
