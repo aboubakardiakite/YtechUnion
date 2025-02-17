@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/ytech-union/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -22,5 +23,4 @@ export default defineConfig({
     include: ['vue']
   },
   root: './',
-  base: './'
 }) 

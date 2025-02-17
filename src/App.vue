@@ -37,7 +37,7 @@ export default {
 
 <style>
 #app {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,4 +56,4 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Pour le défilement ancré */
 }
-</style> 
+</style>
