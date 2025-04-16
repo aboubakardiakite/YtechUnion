@@ -5,6 +5,7 @@
       <Hero />
       <AboutUs />
       <Realisations />
+      <SeparatorBanner />
       <Services />
       <Clients />
       <Contact />
@@ -22,6 +23,7 @@ import Clients from './components/Clients.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import Realisations from './components/Realisations.vue'
+import SeparatorBanner from './components/SeparatorBanner.vue'
 
 export default {
   name: 'App',
@@ -33,7 +35,8 @@ export default {
     Clients,
     Contact,
     Footer,
-    Realisations
+    Realisations,
+    SeparatorBanner
   }
 }
 </script>
