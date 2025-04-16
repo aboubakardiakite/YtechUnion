@@ -4,6 +4,7 @@
     <main class="main-content">
       <Hero />
       <AboutUs />
+      <Realisations />
       <Services />
       <Clients />
       <Contact />
@@ -20,6 +21,7 @@ import Services from './components/Services.vue'
 import Clients from './components/Clients.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+import Realisations from './components/Realisations.vue'
 
 export default {
   name: 'App',
@@ -30,7 +32,8 @@ export default {
     Services,
     Clients,
     Contact,
-    Footer
+    Footer,
+    Realisations
   }
 }
 </script>

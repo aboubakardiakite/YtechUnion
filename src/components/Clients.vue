@@ -1,22 +1,43 @@
 <template>
   <section id="clients" class="clients-section">
-    <h2>Nos clients</h2>
-    <div class="clients-grid">
-      <div v-for="(image, i) in clientImages" :key="i" class="client-box">
-        <img :src="image" :alt="`Client ${i + 1}`">
-      </div>
+    <h2>Ils nous font confiance</h2>
+    <div class="clients-logos">
+      <a v-for="client in clients" 
+         :key="client.id" 
+         :href="client.site" 
+         target="_blank" 
+         class="client-logo">
+        <img :src="client.logo" :alt="client.nom">
+        <div class="client-hover">
+          <span>{{ client.nom }}</span>
+        </div>
+      </a>
     </div>
   </section>
 </template>
 
 <script>
-import { images } from '../assets/images'
+import LearnCyberLogo from '../assets/images/LearnCyber.png'
+import PropulseLogo from '../assets/images/propulse.png'
 
 export default {
   name: 'Clients',
   data() {
     return {
-      clientImages: images.clients
+      clients: [
+        {
+          id: 1,
+          nom: 'Learn Cyber',
+          logo: LearnCyberLogo,
+          site: 'https://learncyber.vercel.app/'
+        },
+        {
+          id: 2,
+          nom: 'Propulse',
+          logo: PropulseLogo,
+          site: 'https://propulse-site.vercel.app/'
+        }
+      ]
     }
   }
 }
@@ -24,67 +45,112 @@ export default {
 
 <style scoped>
 .clients-section {
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   background-color: #f9f9f9;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-size: 2.8rem;
   color: #333;
 }
 
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.client-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.client-logo {
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border: 2px solid transparent;
+  position: relative;
 }
 
-.client-box:hover {
-  transform: translateY(-5px);
+.client-hover {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-.client-box img {
+.client-hover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.client-logo:hover .client-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.client-logo:hover {
+  transform: scale(1.1);
+  border-color: #FF6B00;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.client-logo img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
   .clients-section {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
   }
 
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .clients-logos {
+    gap: 2rem;
   }
 
-  .client-box {
-    padding: 1rem;
+  .client-logo {
+    width: 150px;
+    height: 150px;
+    padding: 1.5rem;
   }
-}
 
-@media (max-width: 480px) {
-  .clients-grid {
-    grid-template-columns: 1fr;
+  .client-hover {
+    font-size: 0.8rem;
+    top: -35px;
+    padding: 0.4rem 0.8rem;
   }
 }
 </style> 
