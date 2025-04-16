@@ -1,7 +1,7 @@
 <template>
   <section class="separator-banner">
     <div class="banner-content">
-      <h2>CCONSTRUIRE UN SITE WEB SOLIDE, C’EST ASSURER LA RÉUSSITE DE VOTRE PROJET.</h2>
+      <h2>CONSTRUIRE UN SITE WEB SOLIDE, C’EST ASSURER LA RÉUSSITE DE VOTRE PROJET.</h2>
     </div>
   </section>
 </template>
