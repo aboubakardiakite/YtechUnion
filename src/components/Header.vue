@@ -11,6 +11,7 @@
         <li><a :class="{ active: activeSection === 'accueil' }" href="#accueil" @click="closeMenu">Accueil</a></li>
         <li><a :class="{ active: activeSection === 'qui-sommes-nous' }" href="#qui-sommes-nous" @click="closeMenu">Qui sommes nous?</a></li>
         <li><a :class="{ active: activeSection === 'services' }" href="#services" @click="closeMenu">Nos services</a></li>
+        <li><a :class="{ active: activeSection === 'realisations' }" href="#realisations" @click="closeMenu">Nos Réalisations</a></li>
         <li><a :class="{ active: activeSection === 'clients' }" href="#clients" @click="closeMenu">Nos clients</a></li>
         <li><a :class="{ active: activeSection === 'contact' }" href="#contact" @click="closeMenu">Contact</a></li>
       </ul>
@@ -38,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    const sections = ['accueil', 'qui-sommes-nous', 'services', 'clients', 'contact']
+    const sections = ['accueil', 'qui-sommes-nous', 'services','realisations', 'clients', 'contact']
     
     const observerOptions = {
       root: null,

@@ -4,9 +4,9 @@
     <main class="main-content">
       <Hero />
       <AboutUs />
-      <Realisations />
-      <SeparatorBanner />
       <Services />
+      <SeparatorBanner />
+      <Realisations />
       <Clients />
       <Contact />
     </main>
