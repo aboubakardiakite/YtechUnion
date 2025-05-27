@@ -28,6 +28,7 @@
 <script>
 import LearnCyberLanding from '../assets/images/leardingPageLearCber.png'
 import PropulseLanding from '../assets/images/leardingPagePropulse.png'
+import NarcisseLanding from '../assets/images/leardingPageNarcisse.png'
 
 export default {
   name: 'Realisations',
@@ -49,7 +50,7 @@ export default {
         {
           id: 2,
           titre: 'Propulse',
-          description: 'Site web professionnel mettant en avant les services et l\'expertise de Propulse dans le domaine du développement web.',
+          description: 'Plateforme spécialisée en e-réputation et communication pour les sportifs',
           keyPoints: [
             'Design moderne et impactant',
             'Navigation fluide',
@@ -57,6 +58,18 @@ export default {
           ],
           image: PropulseLanding,
           lien: 'https://propulse-site.vercel.app/'
+        },
+        {
+          id: 3,
+          titre: 'Narcisse',
+          description: 'Une plateforme spécialisée dans la valorisation de l’image des marques à travers des productions visuelles.',
+          keyPoints: [
+            'Design moderne et impactant',
+            'Navigation fluide',
+            'Présentation claire des services'
+          ],
+          image: NarcisseLanding,
+          lien: 'https://narcisse.vercel.app/'
         }
       ]
     }

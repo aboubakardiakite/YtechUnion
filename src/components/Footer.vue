@@ -20,9 +20,9 @@
       <div class="footer-section">
         <h3>Nos Services</h3>
         <ul>
-          <li>Développement Web</li>
-          <li>SEO et Marketing</li>
-          <li>Branding</li>
+          <li>Création de Site Web de A à Z</li>
+          <li>Accompagnement Digital Global</li>
+          <li>Maintenance & Support Technique</li>
         </ul>
       </div>
 

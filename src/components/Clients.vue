@@ -19,6 +19,7 @@
 <script>
 import LearnCyberLogo from '../assets/images/LearnCyber.png'
 import PropulseLogo from '../assets/images/propulse.png'
+import NarcisseLogo from '../assets/images/narcisse.png'
 
 export default {
   name: 'Clients',
@@ -36,6 +37,12 @@ export default {
           nom: 'Propulse',
           logo: PropulseLogo,
           site: 'https://propulse-site.vercel.app/'
+        },
+        {
+          id: 3,
+          nom: 'Narcisse',
+          logo: NarcisseLogo,
+          site: 'https://narcisse.vercel.app/'
         }
       ]
     }

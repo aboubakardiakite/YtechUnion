@@ -98,7 +98,7 @@ export default {
           role: 'Dévops',
           description: 'Spécialiste en sécurité des applications et protection des données.',
           skills: ['Sécurité Web', 'Pentesting', 'Audit', 'DevSecOps'],
-          image: AntoineImage,
+          image: AxelImage,
           linkedin: 'https://www.linkedin.com/in/antoine-raimand/',
           github: '#'
         },
@@ -108,7 +108,7 @@ export default {
           role: 'Développeur Full Stack',
           description: 'Passionné par le développement et la création d\'applications web innovantes.',
           skills: ['React.js', 'JavaScript', 'UI/UX Design', 'Web Development'],
-          image: AxelImage,
+          image: AntoineImage,
           linkedin: 'https://www.linkedin.com/in/axel-carry-a01b68213/',
           github: '#'
         }
