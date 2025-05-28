@@ -19,6 +19,19 @@
           <a :href="projet.lien" target="_blank" class="visit-btn">
             Visiter le site
           </a>
+
+          <!-- Section des avis clients -->
+          <div class="avis-section" v-if="projet.avis && projet.avis.length > 0">
+            <h4>Avis de nos clients</h4>
+            <div class="avis-container">
+              <div v-for="(avis, index) in projet.avis" :key="index" class="avis-card">
+                <div class="avis-header">
+                  <span class="avis-client">{{ avis.client }}</span>
+                </div>
+                <p class="avis-commentaire">{{ avis.commentaire }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -45,7 +58,17 @@ export default {
             'Contenu sécurisé et structuré'
           ],
           image: LearnCyberLanding,
-          lien: 'https://learncyber.vercel.app/'
+          lien: 'https://learncyber.vercel.app/',
+          avis: [
+            {
+              client: 'SCANDELLA Anthony',
+              commentaire: 'Vu la qualité du travail fourni par Ytechunion, nous ne pouvons que vous remercier !\n' +
+                'Un grand merci à vous pour votre écoute et la collaboration tout au long de notre refonte de site web. \n' +
+                'Vous avez su être force de proposition et innovant sur un sujet que nous ne maîtrisions pas ou peu. \n' +
+                'Un grand merci !',
+              note: 5
+            }
+          ]
         },
         {
           id: 2,
@@ -57,7 +80,14 @@ export default {
             'Présentation claire des services'
           ],
           image: PropulseLanding,
-          lien: 'https://propulse-site.vercel.app/'
+          lien: 'https://propulse-site.vercel.app/',
+          avis: [
+            {
+              client: 'TOURÉ Aminata',
+              commentaire: 'On a vraiment apprécié travailler avec toi et ton équipe sur la création de notre site internet. Tu as été à l’écoute du début à la fin, en prenant en compte chacun de nos retours avec attention et réactivité. Le résultat est fidèle à ce qu’on imaginait. Merci pour ton accompagnement et ton professionnalisme.',
+              note: 5
+            }
+          ]
         },
         {
           id: 3,
@@ -69,7 +99,14 @@ export default {
             'Présentation claire des services'
           ],
           image: NarcisseLanding,
-          lien: 'https://narcisse.vercel.app/'
+          lien: 'https://narcisse.vercel.app/',
+          avis: [
+            {
+              client: 'LOBBESTAEL Alexandre',
+              commentaire: 'Un grand merci à YTechUnion pour leur travail sur notre site web, ils ont su livrer une première version rapidement, avec une très bonne compréhension de nos attentes. Les échanges ont été simples et efficaces, et leur autonomie a vraiment facilité la collaboration.',
+              note: 5
+            }
+          ]
         }
       ]
     }
@@ -196,6 +233,58 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* Styles pour la section des avis */
+.avis-section {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.avis-section h4 {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.avis-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.avis-card:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.avis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.avis-client {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+
+.avis-commentaire {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #d0d0d0;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .realisations-section {
     padding: 4rem 1rem;
@@ -216,6 +305,22 @@ h2 {
 
   .realisation-image {
     height: 200px;
+  }
+
+  .avis-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .avis-card {
+    padding: 0.8rem;
+  }
+
+  .avis-client {
+    font-size: 0.9rem;
+  }
+
+  .avis-commentaire {
+    font-size: 0.8rem;
   }
 }
 </style> 
